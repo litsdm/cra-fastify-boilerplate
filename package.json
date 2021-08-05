@@ -1,0 +1,114 @@
+{
+  "name": "cra-express-boilerplate",
+  "version": "0.1.0",
+  "private": true,
+  "main": "dist",
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "core-js": "^3.8.2",
+    "fastify": "^3.20.1",
+    "fastify-helmet": "^5.3.2",
+    "fastify-static": "^4.2.3",
+    "fs-extra": "^9.0.1",
+    "mongoose": "^5.11.11",
+    "node-sass": "^5.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "4.0.1",
+    "regenerator-runtime": "^0.13.7",
+    "typescript": "^4.3.5",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "dev": "concurrently \"yarn dev-server\" \"yarn dev-client\" --kill-others",
+    "dev-client": "react-scripts start",
+    "dev-server": "cross-env NODE_ENV=development nodemon -w server --exec \"babel-node server\"",
+    "build": "node ./buildScript",
+    "build-server": "babel server -s -D -d dist",
+    "build-client": "react-scripts build",
+    "start": "node dist"
+  },
+  "prettier": {
+    "overrides": [
+      {
+        "files": [
+          ".prettierrc",
+          ".babelrc",
+          ".eslintrc"
+        ],
+        "options": {
+          "parser": "json"
+        }
+      }
+    ],
+    "singleQuote": true
+  },
+  "proxy": "http://localhost:8080",
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.14.6",
+    "@babel/node": "^7.14.9",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/plugin-proposal-decorators": "^7.14.5",
+    "@babel/plugin-proposal-do-expressions": "^7.14.5",
+    "@babel/plugin-proposal-export-default-from": "^7.14.5",
+    "@babel/plugin-proposal-export-namespace-from": "^7.14.5",
+    "@babel/plugin-proposal-function-bind": "^7.14.5",
+    "@babel/plugin-proposal-function-sent": "^7.14.5",
+    "@babel/plugin-proposal-json-strings": "^7.14.5",
+    "@babel/plugin-proposal-logical-assignment-operators": "^7.14.5",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "^7.14.5",
+    "@babel/plugin-proposal-optional-chaining": "^7.14.5",
+    "@babel/plugin-proposal-pipeline-operator": "^7.14.5",
+    "@babel/plugin-proposal-throw-expressions": "^7.14.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-syntax-import-meta": "^7.10.4",
+    "@babel/plugin-transform-react-constant-elements": "^7.14.5",
+    "@babel/plugin-transform-react-inline-elements": "^7.14.5",
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/preset-env": "^7.14.5",
+    "@babel/preset-react": "^7.14.5",
+    "@babel/preset-typescript": "^7.14.5",
+    "@babel/register": "^7.14.5",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^16.4.12",
+    "@types/react": "^17.0.15",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-router-dom": "^5.1.7",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-dev-expression": "^0.2.2",
+    "babel-plugin-react-svg": "^3.0.3",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "concurrently": "^6.2.0",
+    "cross-env": "^7.0.3",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-config-erb": "^3.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-webpack": "^0.13.1",
+    "eslint-plugin-compat": "^3.9.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jest": "^24.3.6",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-promise": "^5.1.0",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "nodemon": "^2.0.12",
+    "prettier": "^2.3.1"
+  }
+}
